@@ -73,7 +73,7 @@
 				      <label for="comment" class="col-md-2 control-label">Please Share Your Opinion</label>
 
 				      <div class="col-md-10">
-				        <input class="form-control" name="title" placeholder="Type Here" type="text">
+				        <input class="form-control" name="comment" placeholder="Type Here" type="text">
 				      </div>
 				    </div>
 

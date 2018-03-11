@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Comment\Comment;
 use App\Models\Post\Post;
+use Session;
 
 class CommentController extends Controller
 {
@@ -14,12 +15,10 @@ class CommentController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function __construct()
-    {
-        $this->middleware('auth', ['except' => 'store']);
+    public function __construct(){
+        
+         $this->middleware('auth');
     }
-
-
     public function index()
     {
         //
@@ -43,13 +42,14 @@ class CommentController extends Controller
      */
     public function store(Request $request , $post_id)
     {
-        $post = Post::find($post_id);
+        // $post = Post::find($post_id);
 
         $comment = new Comment();
 
         $comment->comment = $request->comment;
-
-        $comment->post()->associate($post);
+        $comment->post_id = $post_id;
+        $comment->user_id = auth()->user()->id;
+        // $comment->post()->associate($post);
 
         $comment->save();
 
