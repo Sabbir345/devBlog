@@ -34,29 +34,25 @@
 	</div>
 	
 
-	 <div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<h3 class="comments-title"><span class="glyphicon glyphicon-comment"></span>  {{ $post->comments()->count() }} Comments</h3>
-			@foreach($post->comments as $comment)
-				<div class="comment">
+	 <div class="container">
+	 	
+	 	<div class="row">
+			<div class="col-md-12">
+				<h3 class="comments-title"><span class="glyphicon glyphicon-comment"></span>  {{ $post->comments()->count() }} Comments</h3>
+				@foreach($post->comments as $comment)
+					<div class="comment">
 
-					{{-- <div class="author-info">
-						<div class="author-name">
-							<h4>{{ $comment->name }}</h4>
-							
-						</div>
+						 <div class="comment-content">
+							{{ $comment->comment }}
+							<p class="author-time">{{ date('F dS, Y - g:iA' ,strtotime($comment->created_at)) }}</p>
+						</div> 
 
 					</div>
- --}}
-					{{-- <div class="comment-content">
-						{{ $comment->comment }}
-						<p class="author-time">{{ date('F dS, Y - g:iA' ,strtotime($comment->created_at)) }}</p>
-					</div> --}}
+				@endforeach
+			</div>
+		</div> 
 
-				</div>
-			@endforeach
-		</div>
-	</div> 
+	 </div>
 
 	<div class="row">
 		<div id="comment-form" class="col-md-8 col-md-offset-2" style="margin-top: 50px;">
