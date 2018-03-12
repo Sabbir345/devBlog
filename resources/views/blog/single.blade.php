@@ -14,20 +14,29 @@
 				<h5> 
 	                 Published: {{ date('M j, Y', strtotime($post->created_at)) }}
 	            </h5>
+	            <br>
+	            <hr>
 
-	            <a href="{{route('edit',$post->id)}}"  class="btn btn-primary">Edit</a>
+	            <div class="buttonposition">
+	          		
+	          		<li> <a href="{{route('edit',$post->id)}}"  class="btn btn-primary">Edit</a>
+	          			<li>
+	          			<li>
 
-	            <form action="{{route('delete', $post->id)}}" method="POST" class="inline-it">
-                        {{ csrf_field() }}
+		          		<form action="{{route('delete', $post->id)}}" method="POST" class="inline-it">
+	                        {{ csrf_field() }}
 
-                        {{ method_field('delete') }}
+	                        {{ method_field('delete') }}
 
-                        <button class="btn btn-danger" type="submit" >Delete </button> 
-                        
-                 </form>
+	                    <button class="btn btn-danger" type="submit" >Delete </button> 
+	                        
+	                 	</form>
 
-				<hr>
+	          		</li>
+	          		
+	            </div>
 				
+				 <br> <br>
 			</div>
 		</div>
 		

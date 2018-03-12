@@ -1,3 +1,8 @@
 .pull-right {
     float: right;
 }
+.buttonposition li{
+	list-style: none;
+	float: left;
+	padding-left: 5px;
+}
