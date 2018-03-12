@@ -34,7 +34,7 @@
 				      <label for="description" class="col-md-2 control-label">Post Description</label>
 
 				      <div class="col-md-10">
-				        <input class="form-control" name="description" placeholder="Post Description" type="text">
+				        <textarea class="form-control" name="description" placeholder="Post Description" > </textarea>
 				      </div>
 				      
 				    </div>
