@@ -12,7 +12,11 @@
     <div class="container" >
 
         <div class="col-md-12">
-            <a href="{{ route('create') }}">Create New Post</a>
+
+          <div class="pull-right">
+              <a href="{{ route('create') }}" class="btn btn-primary ">Create New Post</a>
+          </div>
+          
         </div>
 
         <table class="table table-striped table-hover ">

@@ -22,7 +22,7 @@
 
                         {{ method_field('delete') }}
 
-                        <input class="btn btn-danger" type="submit" value="Delete">
+                        <button class="btn btn-danger" type="submit" >Delete </button> 
                         
                  </form>
 
@@ -53,9 +53,10 @@
 		</div> 
 
 	 </div>
-
-	<div class="row">
-		<div id="comment-form" class="col-md-8 col-md-offset-2" style="margin-top: 50px;">
+	<div class="container">
+		
+		<div class="row">
+		<div id="comment-form" class="col-md-9 col-md-offset-1" style="margin-top: 50px;">
 
 			<form class="form-horizontal" method="post" action="
 			{{ route('comment.save',$post->id)}}">
@@ -78,6 +79,9 @@
 			</form>
 		</div>
 	</div>
+
+	</div>
+	
 
 	 
 
