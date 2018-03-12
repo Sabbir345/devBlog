@@ -49,11 +49,11 @@ class CommentController extends Controller
         $comment->comment = $request->comment;
         $comment->post_id = $post_id;
         $comment->user_id = auth()->user()->id;
-        // $comment->post()->associate($post);
+        //$comment->post()->associate($post);
 
         $comment->save();
 
-        Session::flash('success', 'Comment was added');
+        return redirect(route('commentsave', $comment->post_id))->with('message', 'Successfully Added Comment');
 
     }
 

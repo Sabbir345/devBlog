@@ -59,13 +59,11 @@
 		<div id="comment-form" class="col-md-9 col-md-offset-1" style="margin-top: 50px;">
 
 			<form class="form-horizontal" method="post" action="
-			{{ route('comment.save',$post->id)}}">
-
+			{{ route('commentsave',$post->id)}}">
 
 					{{csrf_field()}}
 
 				<fieldset>
-					
 					<div class="form-group">
 				      <label for="comment" class="col-md-2 control-label">Please Share Your Opinion</label>
 

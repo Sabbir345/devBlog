@@ -29,7 +29,7 @@ Route::group(['middleware' => ['web']], function () {
 
 	//for comment 
 
-	Route::post('blog/{post_id}', 'CommentController@store')->name('comment.save');
+	Route::post('blog/{post_id}', 'CommentController@store')->name('commentsave');
 	// Route::get('comments/{post_id}/edit', 'CommentController@edit')->name('comment.edit');
 	// Route::delete('delete/{id}' , 'CommentController@delete')->name('comment.delete');
 
